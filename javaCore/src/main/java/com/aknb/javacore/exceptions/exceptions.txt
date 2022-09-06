@@ -1,0 +1,22 @@
+
+                                                     OBJECT
+                                                       |
+                                                       |
+                                                    THROWABLE
+                              -----------------------------------------------------
+                              |                                                   |
+
+                            Error                                             Exception
+
+          -------------------------------------                      -------------------------------------
+          |                 |                 |                      |                                   |
+                                                                                    -------------------------------------------
+    ThreadDeath  |  VirtualMachineError  |  IOError          RuntimeException       |                     |                   |
+                            |                                        |         IOException          SQLException    BrokenBarrierException
+               ----------------------------                          |
+               |                          |                          |
+
+        OutOfMemoryError           StackOverflowError       -------------------------------------
+                                                            |                                   |
+
+                                                NullPointerException                     ArithmeticException

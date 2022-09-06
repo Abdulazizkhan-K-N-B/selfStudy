@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security_db
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
