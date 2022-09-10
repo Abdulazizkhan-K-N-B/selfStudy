@@ -1,6 +1,5 @@
 package com.aknb.javacore.oop.encapsulation;
-
-import org.aknb.oop.inheritance.Human;
+import com.aknb.javacore.oop.inheritance.Human;
 
 public class Teacher extends Human {
 
