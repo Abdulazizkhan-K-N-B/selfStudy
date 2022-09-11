@@ -25,4 +25,8 @@ public interface Interface {
     public boolean isTub(int n);
 
     public int[] prevDate(int day, int month, int year);
+
+    public int[] nextDate(int day, int month, int year);
+
+    public int frequencyCounter(String[] inputArr, int temp);
 }

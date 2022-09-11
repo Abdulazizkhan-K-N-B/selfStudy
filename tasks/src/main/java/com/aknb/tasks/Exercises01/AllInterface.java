@@ -97,4 +97,25 @@ public interface AllInterface {
 
     /* 01.32 */
     public void funSimple11();
+
+    /* 01.33 */
+    public void funSimple12();
+
+    /* 01.34 */
+    public void array1();
+
+    /* 01.35 */
+    public void array2();
+
+    /* 01.36 */
+    public void array3();
+
+    /* 01.37 */
+    public void array4();
+
+    /* 01.38 */
+    public void array5();
+
+    /* 01.39 */
+    public void array6();
 }

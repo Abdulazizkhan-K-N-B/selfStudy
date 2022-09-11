@@ -162,15 +162,13 @@ public class Common implements Interface {
         }
     }
 
-    public int[] prevDate(int day,
-            int month,
-            int year) {
+    public int[] prevDate(int day, int month, int year) {
 
-        day -= 1;
+        day--;
         if (day == 0) {
-            month -= 1;
+            month--;
             if (month == 0) {
-                year -= 1;
+                year--;
                 month = 12;
                 day = 31;
             } else {
@@ -179,5 +177,37 @@ public class Common implements Interface {
         }
 
         return new int[] { day, month, year };
+    }
+
+    public int[] nextDate(int day, int month, int year) {
+
+        int thisMonthDay = monthDays(month, year);
+        day++;
+        if (day > thisMonthDay) {
+
+            month++;
+            if (month > 12) {
+                year++;
+                month = 1;
+                day = 1;
+            } else {
+                day = 1;
+            }
+        }
+
+        return new int[] { day, month, year };
+    }
+
+    public int frequencyCounter(String[] inputArr, int temp) {
+        int u = 0;
+
+        for (int i = 0; i < inputArr.length; i++) {
+
+            if (Integer.valueOf(inputArr[i]) == temp) {
+                u++;
+            }
+        }
+
+        return u;
     }
 }

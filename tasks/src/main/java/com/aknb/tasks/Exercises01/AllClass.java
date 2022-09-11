@@ -1,5 +1,8 @@
 package com.aknb.tasks.Exercises01;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import com.aknb.tasks.commonMethods.Common;
 import com.aknb.tasks.commonMethods.Interface;
@@ -788,22 +791,220 @@ public class AllClass implements AllInterface {
 
     @Override
     public void funSimple11() {
-
-        int day, month, year;
-
         System.out.print("PreavDate(D, M, Y) function.(format: 1 3 2020)");
-        String[] input = in.nextLine().split(" ");
+        String[] date = in.nextLine().split(" ");
 
-        day = Integer.valueOf(input[0]);
-        month = Integer.valueOf(input[1]);
-        year = Integer.valueOf(input[2]);
+        int day = Integer.valueOf(date[0]);
+        int month = Integer.valueOf(date[1]);
+        int year = Integer.valueOf(date[2]);
 
-        if (commonMethods.monthDays(month, year) != 0) {
-            
+        int checkMonthDays = -commonMethods.monthDays(month, year);
+        if (checkMonthDays != 0 && checkMonthDays >= day) {
+
             int[] output = commonMethods.prevDate(day, month, year);
             System.out.printf("%d/%d/%d\n", output[0], output[1], output[2]);
         } else {
-            System.out.println("Bunday sanan yo'q");
+            System.out.println("Bunday sana yo'q");
         }
+    }
+
+    @Override
+    public void funSimple12() {
+
+        System.out.print("NextDate(D, M, Y) function.(format: 28 2 2020)");
+        String[] date = in.nextLine().split(" ");
+        int day = Integer.valueOf(date[0]);
+        int month = Integer.valueOf(date[1]);
+        int year = Integer.valueOf(date[2]);
+
+        int checkMonthDays = commonMethods.monthDays(month, year);
+        if (checkMonthDays != 0 && checkMonthDays >= day) {
+
+            int[] output = commonMethods.nextDate(day, month, year);
+            System.out.printf("%d/%d/%d", output[0], output[1], output[2]);
+        } else {
+            System.out.println("Bunday sana yo'q");
+        }
+
+    }
+
+    @Override
+    public void array1() {
+
+        System.out.print("Array1 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        for (int i = 0; i < size / 2; i++) {
+
+            System.out.print(inputArr[i] + " ");
+            System.out.print(inputArr[inputArr.length - (i + 1)] + " ");
+        }
+
+        if (size % 2 != 0) {
+
+            System.out.print(inputArr[(size / 2)]);
+        }
+    }
+
+    @Override
+    public void array2() {
+
+        System.out.print("Array2 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        boolean bool = true;
+        for (int i = 0; i < (size / 2); i++) {
+
+            if (bool) {
+
+                System.out.print(inputArr[i] + " ");
+                System.out.print(inputArr[i + 1] + " ");
+                bool = false;
+            } else {
+
+                System.out.print(inputArr[size - i] + " ");
+                System.out.print(inputArr[size - (i + 1)] + " ");
+                bool = true;
+            }
+        }
+
+        if (size % 2 != 0 && (size / 2) % 2 != 0) {
+
+            System.out.print(inputArr[(size / 2) + 1]);
+        } else {
+
+            System.out.print(inputArr[(size / 2)]);
+        }
+    }
+
+    @Override
+    public void array3() {
+
+        System.out.print("Array3 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int leftNeighbor, middle, rightNeighbor;
+        int lmax = 0;
+
+        for (int i = 0; i < size - 2; i++) {
+            leftNeighbor = Integer.valueOf(inputArr[i]);
+            middle = Integer.valueOf(inputArr[i + 1]);
+            rightNeighbor = Integer.valueOf(inputArr[i + 2]);
+
+            if (leftNeighbor < middle && middle > rightNeighbor) {
+                lmax = (middle < lmax || lmax == 0) ? middle : lmax;
+            }
+        }
+        System.out.println(lmax);
+    }
+
+    @Override
+    public void array4() {
+
+        System.out.print("Array4 size of array: ");
+        int size = in.nextInt();
+
+        System.out.print("R: ");
+        int r = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int nearest = 0;
+        for (int i = 0; i < size; i++) {
+
+            if (Integer.valueOf(inputArr[i]) <= r
+                    && Integer.valueOf(inputArr[i]) > nearest) {
+
+                nearest = Integer.valueOf(inputArr[i]);
+            }
+        }
+
+        System.out.println(nearest);
+    }
+
+    @Override
+    public void array5() {
+
+        System.out.print("Array4 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        List<Integer> numbers = new LinkedList<>();
+        List<Integer> frequency = new LinkedList<>();
+        int temp;
+
+        for (int i = 0; i < size; i++) {
+
+            temp = Integer.valueOf(inputArr[i]);
+
+            if (!numbers.contains(temp)) {
+
+                numbers.add(temp);
+
+                // freaquencyCounter returns a count of temp in list
+                frequency.add(
+                        commonMethods.frequencyCounter(inputArr, temp));
+            }
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+
+            numbers.get(i);
+            frequency.get(i);
+            System.out.println(
+                    numbers.get(i) + "\tsoni\t" +
+                            frequency.get(i) + "\tta");
+        }
+
+        System.out.println("numbers   = " + numbers);
+        System.out.println("frequency = " + frequency);
+    }
+
+    @Override
+    public void array6(){
+
+        System.out.print("Enter the n: ");
+        int n = in.nextInt();
+
+        System.out.print("Enter the m: ");
+        int m = in.nextInt();
+        int randNum;
+        int[] testBase = new int[m];
+        List<Integer> tests = new LinkedList<>();
+
+
+        for (int i = 0; i < m; i++) {
+            testBase[i] = i+1;
+        }
+
+        int u = 0;
+        Random rand = new Random();
+        while (tests.size() < n){
+            u++;
+            randNum = rand.nextInt(10);
+
+            if (!tests.contains(testBase[randNum])){
+                tests.add(testBase[randNum]);
+            }
+        }
+        System.out.println(u);
+        System.out.println(tests);
     }
 }
