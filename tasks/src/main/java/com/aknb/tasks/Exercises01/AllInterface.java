@@ -118,4 +118,8 @@ public interface AllInterface {
 
     /* 01.39 */
     public void array6();
+
+    /* 01.40 */
+    public void array7(); // Buble sort
+
 }

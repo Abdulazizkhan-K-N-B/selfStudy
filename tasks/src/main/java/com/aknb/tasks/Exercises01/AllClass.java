@@ -978,7 +978,7 @@ public class AllClass implements AllInterface {
     }
 
     @Override
-    public void array6(){
+    public void array6() {
 
         System.out.print("Enter the n: ");
         int n = in.nextInt();
@@ -989,22 +989,55 @@ public class AllClass implements AllInterface {
         int[] testBase = new int[m];
         List<Integer> tests = new LinkedList<>();
 
-
         for (int i = 0; i < m; i++) {
-            testBase[i] = i+1;
+            testBase[i] = i + 1;
         }
 
         int u = 0;
         Random rand = new Random();
-        while (tests.size() < n){
+        while (tests.size() < n) {
             u++;
             randNum = rand.nextInt(10);
 
-            if (!tests.contains(testBase[randNum])){
+            if (!tests.contains(testBase[randNum])) {
                 tests.add(testBase[randNum]);
             }
         }
         System.out.println(u);
         System.out.println(tests);
+    }
+
+    @Override
+    public void array7() {
+
+        System.out.print("Array7 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int[] nums = new int[size];
+        for (int i = 0; i < size; i++) {
+            nums[i] = Integer.valueOf(inputArr[i]);
+        }
+
+        int temp;
+        for (int i = 0; i < nums.length; i++) {
+
+            for (int j = 0; j < nums.length - 1; j++) {
+
+                if (nums[j] > nums[j + 1]){
+                    temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        
+        }
+
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
     }
 }
