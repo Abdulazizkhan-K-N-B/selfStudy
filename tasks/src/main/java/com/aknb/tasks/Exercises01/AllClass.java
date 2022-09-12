@@ -1022,22 +1022,128 @@ public class AllClass implements AllInterface {
             nums[i] = Integer.valueOf(inputArr[i]);
         }
 
-        int temp;
-        for (int i = 0; i < nums.length; i++) {
-
-            for (int j = 0; j < nums.length - 1; j++) {
-
-                if (nums[j] > nums[j + 1]){
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
-        
-        }
+        nums = commonMethods.bubbleSort(nums);
 
         for (int num : nums) {
             System.out.print(num + " ");
+        }
+    }
+
+    @Override
+    public void array8() {
+
+        System.out.print("Array8 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int[] nums = new int[size];
+        for (int i = 0; i < size; i++) {
+            nums[i] = Integer.valueOf(inputArr[i]);
+        }
+
+        nums = commonMethods.selectionSort(nums);
+
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
+
+    @Override
+    public void array9() {
+
+        System.out.print("Array9 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int[] nums = new int[size];
+        for (int i = 0; i < size; i++) {
+            nums[i] = Integer.valueOf(inputArr[i]);
+        }
+
+        nums = commonMethods.insertionSort(nums);
+
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
+
+    @Override
+    public void array10() {
+
+        System.out.print("Array10 size of array: ");
+        int size = in.nextInt();
+
+        in = new Scanner(System.in);
+        System.out.print("Enter array numbers:");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int[] A = new int[size];
+        for (int i = 0; i < size; i++) {
+            A[i] = Integer.valueOf(inputArr[i]);
+        }
+
+        List<Integer> B = new LinkedList<>(); // series
+        List<Integer> C = new LinkedList<>(); // element
+
+        int series = 1;
+        for (int j = 0; j < A.length - 1; j++) {
+
+            if (A[j] == A[j + 1]) {
+
+                series++;
+                if (j == A.length - 2) {
+                    C.add(A[j]);
+                    B.add(series);
+                }
+            } else {
+
+                C.add(A[j]);
+                B.add(series);
+                series = 1;
+            }
+        }
+
+        System.out.println(B);
+        System.out.println(C);
+    }
+
+    @Override
+    public void matrix() {
+
+        System.out.print("Matrix function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        in = new Scanner(System.in);
+
+        System.out.print("array: ");
+        String[] inputArr = in.nextLine().split(" ");
+
+        int size = inputArr.length;
+        int[] inNums = new int[size];
+
+        for (int u = 0; u < size; u++) {
+
+            inNums[u] = Integer.valueOf(inputArr[u]);
+        }
+
+
+        int[][] matrix = commonMethods.matrixSpiral(m, n, inNums);
+
+        for (int i = 0; i < m; i++) {
+            
+            for (int index = 0; index < n; index++) {
+                System.out.print(matrix[i][index] + "    ");
+            }
+            System.out.println();
         }
     }
 }

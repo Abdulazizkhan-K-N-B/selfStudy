@@ -10,6 +10,14 @@ public class Common implements Interface {
     }
 
     @Override
+    public void swapper(Integer x, Integer y) {
+
+        x += y;
+        y = x - y;
+        x -= y;
+    }
+
+    @Override
     public boolean isPalindrom(int number) {
         int digitCount = digitCounter(number);
 
@@ -26,6 +34,7 @@ public class Common implements Interface {
         return true;
     }
 
+    @Override
     public boolean isTub(int n) {
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
@@ -162,6 +171,7 @@ public class Common implements Interface {
         }
     }
 
+    @Override
     public int[] prevDate(int day, int month, int year) {
 
         day--;
@@ -179,6 +189,7 @@ public class Common implements Interface {
         return new int[] { day, month, year };
     }
 
+    @Override
     public int[] nextDate(int day, int month, int year) {
 
         int thisMonthDay = monthDays(month, year);
@@ -198,6 +209,7 @@ public class Common implements Interface {
         return new int[] { day, month, year };
     }
 
+    @Override
     public int frequencyCounter(String[] inputArr, int temp) {
         int u = 0;
 
@@ -209,5 +221,93 @@ public class Common implements Interface {
         }
 
         return u;
+    }
+
+    @Override
+    public int[] bubbleSort(int nums[]) {
+
+        for (int i = 0; i < nums.length; i++) {
+
+            for (int j = 0; j < nums.length - 1; j++) {
+
+                if (nums[j] > nums[j + 1]) {
+
+                    nums[j] += nums[j + 1];
+                    nums[j + 1] = nums[j] - nums[j + 1];
+                    nums[j] -= nums[j + 1];
+                }
+            }
+        }
+        return nums;
+    }
+
+    @Override
+    public int[] selectionSort(int nums[]) {
+
+        int size = nums.length, minInd;
+        for (int i = 0; i < size; i++) {
+
+            minInd = i;
+            for (int j = i + 1; j < size; j++) {
+
+                if (nums[minInd] > nums[j]) {
+                    minInd = j;
+                }
+            }
+
+            if (minInd != i) {
+                nums[i] += nums[minInd];
+                nums[minInd] = nums[i] - nums[minInd];
+                nums[i] -= nums[minInd];
+            }
+        }
+        return nums;
+    }
+
+    @Override
+    public int[] insertionSort(int nums[]) {
+
+        int size = nums.length;
+        for (int i = 0; i < size - 1; i++) {
+
+            for (int j = i + 1; j > 0; j--) {
+
+                if (nums[j] < nums[j - 1]) {
+
+                    nums[j] += nums[j - 1];
+                    nums[j - 1] = nums[j] - nums[j - 1];
+                    nums[j] -= nums[j - 1];
+                } else {
+
+                    break;
+                }
+            }
+        }
+
+        return nums;
+    }
+
+    @Override
+    public int[][] matrixSpiral(int m, int n, int[] names){
+
+        int[][] matrix = new int[m][n];
+
+        int l = 0;
+        for (int i = 0; i < m; i += 2) {
+
+            for (int x = 0; x < n; x++) {
+
+                matrix[i][x] = names[l];
+                l++;
+            }
+
+            for (int y = n - 1; y >= 0; y--) {
+
+                matrix[i + 1][y] = names[l];
+                l++;
+            }
+        }
+
+        return matrix;
     }
 }

@@ -120,6 +120,17 @@ public interface AllInterface {
     public void array6();
 
     /* 01.40 */
-    public void array7(); // Buble sort
+    public void array7(); // Bubble sort
 
+    /* 01.41 */
+    public void array8(); // Selection sort
+
+    /* 01.42 */
+    public void array9(); // insertion sort
+
+    /* 01.43 */
+    public void array10();
+
+    /* 01.44 */
+    public void matrix();
 }

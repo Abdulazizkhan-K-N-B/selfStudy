@@ -2,7 +2,13 @@ package com.aknb.tasks.commonMethods;
 
 public interface Interface {
 
+    public void print_();
+
+    public void swapper(Integer x, Integer y);
+
     public boolean isPalindrom(int number);
+
+    public boolean isTub(int n);
 
     public boolean isPrime(int n);
 
@@ -20,13 +26,17 @@ public interface Interface {
 
     public int monthDays(int month, int year);
 
-    public void print_();
-
-    public boolean isTub(int n);
-
     public int[] prevDate(int day, int month, int year);
 
     public int[] nextDate(int day, int month, int year);
 
     public int frequencyCounter(String[] inputArr, int temp);
+
+    public int[] bubbleSort(int[] nums);
+
+    public int[] selectionSort(int[] nums);
+
+    public int[] insertionSort(int[] nums);
+
+    public int[][] matrixSpiral(int m, int n, int[] inNums);
 }
