@@ -133,4 +133,16 @@ public interface AllInterface {
 
     /* 01.44 */
     public void matrix();
+
+    /* 01.45 */
+    public void matrix2();
+
+    /* 01.46 */
+    public void matrix3();
+
+    /* 01.47 */
+    public void matrix4();
+
+    /* 01.48 */
+    public void matrix5();
 }

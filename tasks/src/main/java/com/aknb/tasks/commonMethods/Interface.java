@@ -6,6 +6,8 @@ public interface Interface {
 
     public void swapper(Integer x, Integer y);
 
+    public int[] arrStringToInt(String[] strArr);
+
     public boolean isPalindrom(int number);
 
     public boolean isTub(int n);
@@ -38,5 +40,7 @@ public interface Interface {
 
     public int[] insertionSort(int[] nums);
 
-    public int[][] matrixSpiral(int m, int n, int[] inNums);
+    public int[][] matrixSpiral(int m, int n, int[] intArr);
+
+    public int[][] matrixRowByRow(int m, int n, int[] intArr);
 }

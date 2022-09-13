@@ -1116,7 +1116,7 @@ public class AllClass implements AllInterface {
     @Override
     public void matrix() {
 
-        System.out.print("Matrix function\nm: ");
+        System.out.print("Matrix1 function\nm: ");
         int m = in.nextInt();
 
         System.out.print("n: ");
@@ -1125,25 +1125,170 @@ public class AllClass implements AllInterface {
         in = new Scanner(System.in);
 
         System.out.print("array: ");
-        String[] inputArr = in.nextLine().split(" ");
-
-        int size = inputArr.length;
-        int[] inNums = new int[size];
-
-        for (int u = 0; u < size; u++) {
-
-            inNums[u] = Integer.valueOf(inputArr[u]);
-        }
-
-
-        int[][] matrix = commonMethods.matrixSpiral(m, n, inNums);
-
         for (int i = 0; i < m; i++) {
-            
+
             for (int index = 0; index < n; index++) {
-                System.out.print(matrix[i][index] + "    ");
+                System.out.print(
+                        commonMethods.matrixSpiral(m, n,
+                                commonMethods.arrStringToInt(in.nextLine().split(" ")))[i][index] + "    ");
             }
             System.out.println();
+        }
+    }
+
+    @Override
+    public void matrix2() {
+
+        System.out.print("Matrix2 function\nm: ");
+        int m = in.nextInt();
+
+        in = new Scanner(System.in);
+
+        System.out.print("array: ");
+
+        int[][] matrix = commonMethods.matrixRowByRow(
+                m,
+                m,
+                commonMethods.arrStringToInt(
+                        in.nextLine().split(" ")));
+
+        int j = 0;
+        for (int i = 0; i < m; i++) {
+
+            while (j < (m - i)) {
+
+                System.out.print(
+                        matrix[i][j] + " ");
+                j++;
+            }
+            for (int k = (i + 1); k < m; k++) {
+
+                System.out.print(
+                        matrix[k][j - 1] + " ");
+            }
+            System.out.println();
+            j = 0;
+        }
+    }
+
+    @Override
+    public void matrix3() {
+
+        System.out.print("Matrix3 function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        in = new Scanner(System.in);
+
+        System.out.print("array: ");
+
+        int[][] matrix = commonMethods.matrixRowByRow(
+                m,
+                n,
+                commonMethods.arrStringToInt(
+                        in.nextLine().split(" ")));
+
+        int sumOfRaw = 0;
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                sumOfRaw += matrix[i][j];
+                System.out.print(
+                        matrix[i][j] + " ");
+            }
+            System.out.println(" => " + sumOfRaw);
+            sumOfRaw = 0;
+        }
+    }
+
+    @Override
+    public void matrix4() {
+
+        System.out.print("Matrix4 function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        in = new Scanner(System.in);
+
+        System.out.print("array: ");
+
+        int[][] matrix = commonMethods.matrixRowByRow(
+                m,
+                n,
+                commonMethods.arrStringToInt(
+                        in.nextLine().split(" ")));
+
+        int[] multOfColumn = new int[n];
+        for (int i = 0; i < n; i++) {
+            multOfColumn[i] = 1;
+        }
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                multOfColumn[j] *= matrix[i][j];
+                System.out.print(
+                        matrix[i][j] + "   ");
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(
+                    multOfColumn[i] + "  ");
+        }
+    }
+
+    @Override
+    public void matrix5() {
+
+        System.out.print("Matrix5 function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        in = new Scanner(System.in);
+
+        System.out.print("array: ");
+
+        int mCount = 0, pCount =  0 ;
+        int[][] matrix = commonMethods.matrixRowByRow(
+                m,
+                n,
+                commonMethods.arrStringToInt(
+                        in.nextLine().split(" ")));
+
+        byte rawNum = 0;
+        for (int i = 0; i < m; i++){
+
+            for (int j = 0; j < n; j++){
+                if (matrix[i][j] > 0) pCount++;
+                if (matrix[i][j] < 0) mCount++;
+            }
+            if (mCount == pCount){
+                rawNum = (byte)i;
+                break;
+            }
+            mCount = 0;
+            pCount = 0;
+        }
+
+        if (rawNum > 0){
+            System.out.println(
+                rawNum
+            );
+        } else {
+            System.out.println(
+                "Bunday satr yo'q"
+            );
         }
     }
 }

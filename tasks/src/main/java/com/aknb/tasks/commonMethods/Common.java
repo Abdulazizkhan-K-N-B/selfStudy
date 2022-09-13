@@ -18,6 +18,17 @@ public class Common implements Interface {
     }
 
     @Override
+    public int[] arrStringToInt(String[] strArr) {
+        int[] intArr = new int[strArr.length];
+
+        for (int u = 0; u < strArr.length; u++) {
+
+            intArr[u] = Integer.valueOf(strArr[u]);
+        }
+        return intArr;
+    }
+
+    @Override
     public boolean isPalindrom(int number) {
         int digitCount = digitCounter(number);
 
@@ -288,7 +299,7 @@ public class Common implements Interface {
     }
 
     @Override
-    public int[][] matrixSpiral(int m, int n, int[] names){
+    public int[][] matrixSpiral(int m, int n, int[] names) {
 
         int[][] matrix = new int[m][n];
 
@@ -304,6 +315,24 @@ public class Common implements Interface {
             for (int y = n - 1; y >= 0; y--) {
 
                 matrix[i + 1][y] = names[l];
+                l++;
+            }
+        }
+
+        return matrix;
+    }
+
+    @Override
+    public int[][] matrixRowByRow(int m, int n, int[] names) {
+
+        int[][] matrix = new int[m][n];
+
+        int l = 0;
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                matrix[i][j] = names[l];
                 l++;
             }
         }
