@@ -1,6 +1,7 @@
 package com.aknb.tasks.commonMethods;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Common implements Interface {
 
@@ -26,6 +27,20 @@ public class Common implements Interface {
             intArr[u] = Integer.valueOf(strArr[u]);
         }
         return intArr;
+    }
+
+    @Override
+    public int[][] inFullArray(int m, int n){
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("array: ");
+
+        return matrixRowByRow(
+                m,
+                n,
+                arrStringToInt(
+                        in.nextLine().split(" ")));
+                        
     }
 
     @Override

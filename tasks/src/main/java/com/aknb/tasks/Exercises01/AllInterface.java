@@ -145,4 +145,40 @@ public interface AllInterface {
 
     /* 01.48 */
     public void matrix5();
+
+    /* 01.49 */
+    public void matrix6();
+
+    /* 01.50 */
+    public void matrix7();
+
+    /* 01.51 */
+    public void matrix8();
+
+    /* 01.52 */
+    public void matrix9();
+
+    /* 01.53 */
+    public void matrix10();
+
+    /* 01.54 */
+    public void string1();
+
+    /* 01.55 */
+    public void string2();
+
+    /* 01.56 */
+    public void string3();
+
+    /* 01.57 */
+    public void string4();
+
+    /* 01.58 */
+    public void string5();
+
+    /* 01.59 */
+    public void string6();
+
+     /* 01.60 */
+     public void string7();
 }

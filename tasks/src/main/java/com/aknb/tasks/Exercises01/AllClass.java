@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
 import com.aknb.tasks.commonMethods.Common;
 import com.aknb.tasks.commonMethods.Interface;
 
@@ -1142,15 +1143,7 @@ public class AllClass implements AllInterface {
         System.out.print("Matrix2 function\nm: ");
         int m = in.nextInt();
 
-        in = new Scanner(System.in);
-
-        System.out.print("array: ");
-
-        int[][] matrix = commonMethods.matrixRowByRow(
-                m,
-                m,
-                commonMethods.arrStringToInt(
-                        in.nextLine().split(" ")));
+        int[][] matrix = commonMethods.inFullArray(m, m);
 
         int j = 0;
         for (int i = 0; i < m; i++) {
@@ -1180,15 +1173,7 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        in = new Scanner(System.in);
-
-        System.out.print("array: ");
-
-        int[][] matrix = commonMethods.matrixRowByRow(
-                m,
-                n,
-                commonMethods.arrStringToInt(
-                        in.nextLine().split(" ")));
+        int[][] matrix = commonMethods.inFullArray(m, n);
 
         int sumOfRaw = 0;
 
@@ -1214,15 +1199,7 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        in = new Scanner(System.in);
-
-        System.out.print("array: ");
-
-        int[][] matrix = commonMethods.matrixRowByRow(
-                m,
-                n,
-                commonMethods.arrStringToInt(
-                        in.nextLine().split(" ")));
+        int[][] matrix = commonMethods.inFullArray(m, n);
 
         int[] multOfColumn = new int[n];
         for (int i = 0; i < n; i++) {
@@ -1255,40 +1232,276 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        in = new Scanner(System.in);
-
-        System.out.print("array: ");
-
-        int mCount = 0, pCount =  0 ;
-        int[][] matrix = commonMethods.matrixRowByRow(
-                m,
-                n,
-                commonMethods.arrStringToInt(
-                        in.nextLine().split(" ")));
+        int mCount = 0, pCount = 0;
+        int[][] matrix = commonMethods.inFullArray(m, n);
 
         byte rawNum = 0;
-        for (int i = 0; i < m; i++){
+        for (int i = 0; i < m; i++) {
 
-            for (int j = 0; j < n; j++){
-                if (matrix[i][j] > 0) pCount++;
-                if (matrix[i][j] < 0) mCount++;
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] > 0)
+                    pCount++;
+                if (matrix[i][j] < 0)
+                    mCount++;
             }
-            if (mCount == pCount){
-                rawNum = (byte)i;
+            if (mCount == pCount) {
+                rawNum = (byte) i;
                 break;
             }
             mCount = 0;
             pCount = 0;
         }
 
-        if (rawNum > 0){
+        if (rawNum > 0) {
             System.out.println(
-                rawNum
-            );
+                    rawNum);
         } else {
             System.out.println(
-                "Bunday satr yo'q"
-            );
+                    "Bunday satr yo'q");
         }
+    }
+
+    @Override
+    public void matrix6() {
+
+        System.out.print("Matrix6 function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        int[][] matrix = commonMethods.inFullArray(m, n);
+
+        int highest = 0, temp;
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                temp = matrix[i][j];
+                System.out.print(temp + "  ");
+
+                if (highest < temp) {
+                    highest = temp;
+                }
+            }
+            System.out.println(highest);
+            highest = 0;
+        }
+    }
+
+    @Override
+    public void matrix7() {
+
+        System.out.print("Matrix7 function\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        int[][] matrix = commonMethods.inFullArray(m, n);
+
+        int[] highestArr = new int[n];
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                System.out.print(matrix[i][j] + "  ");
+                if (matrix[i][j] > highestArr[j]) {
+                    highestArr[j] = matrix[i][j];
+                }
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(highestArr[i] + "  ");
+        }
+    }
+
+    @Override
+    public void matrix8() {
+
+        System.out.print("Matrix8 function.\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        int[][] matrix = commonMethods.inFullArray(m, n);
+
+        int[] smallest = { matrix[0][0], 0, 0 };
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                if (matrix[i][j] < smallest[0]) {
+                    smallest[0] = matrix[i][j];
+                    smallest[1] = i;
+                    smallest[2] = j;
+                }
+            }
+        }
+
+        System.out.println(smallest[1] + "  " + smallest[2]);
+    }
+
+    @Override
+    public void matrix9() {
+
+        System.out.print("Matrix9 function.\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        int[][] matrix = commonMethods.inFullArray(m, n);
+
+        int[] smallest = { matrix[0][0], 0 };
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                if (matrix[i][j] < smallest[0]) {
+
+                    smallest[0] = matrix[i][j];
+                    smallest[1] = j;
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                if (j == smallest[1]) {
+
+                    continue;
+                }
+                System.out.print(matrix[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
+
+    @Override
+    public void matrix10() {
+
+        System.out.print("Matrix10 function.\nm: ");
+        int m = in.nextInt();
+
+        System.out.print("n: ");
+        int n = in.nextInt();
+
+        int[][] matrix = commonMethods.inFullArray(m, n);
+
+        int[] smallest = { matrix[0][0], 0 };
+
+        for (int i = 0; i < m; i++) {
+
+            for (int j = 0; j < n; j++) {
+
+                if (matrix[i][j] < smallest[0]) {
+
+                    smallest[0] = matrix[i][j];
+                    smallest[1] = i;
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+
+            if (i == smallest[1])
+                continue;
+
+            for (int j = 0; j < n; j++) {
+
+                System.out.print(matrix[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
+
+    @Override
+    public void string1() {
+
+        System.out.print("String1() enter line: ");
+        String[] inArr = in.nextLine().split(" ");
+
+        for (int i = 1; i < inArr.length - 1; i++) {
+
+            System.out.print(inArr[i] + " ");
+        }
+    }
+
+    @Override
+    public void string2() {
+
+        System.out.print("String1() function enter line: ");
+        String[] inArr = in.nextLine().split(" ");
+
+        System.out.println(inArr.length);
+    }
+
+    @Override
+    public void string3() {
+
+        System.out.print("String1() function enter line: ");
+        String[] inArr = in.nextLine().split(" ");
+
+        int[] minStrLength = { 0, inArr[0].length() };
+
+        for (int i = 1; i < inArr.length; i++) {
+
+            if (inArr[i].length() < minStrLength[1]) {
+
+                minStrLength[0] = i;
+                minStrLength[1] = inArr[i].length();
+            }
+        }
+
+        System.out.println(inArr[minStrLength[0]] + " " + minStrLength[1]);
+    }
+
+    @Override
+    public void string4() {
+
+        System.out.print("String1() function enter line: ");
+        String[] inArr = in.nextLine().split(" ");
+
+        for (int i = 0; i < inArr.length; i++){
+
+            System.out.print(
+                inArr[i].substring(0, 1).toUpperCase() + inArr[i].substring(1) + " "
+            );;
+        }
+        System.out.println();
+    }
+
+    @Override
+    public void string5(){
+
+        System.out.print("String5() function enter line:");
+        System.out.println(in.nextLine().replaceAll("\\s+", " "));
+    }
+
+    @Override
+    public void string6(){
+
+        System.out.println("String6() function enter line:");
+        String[] inArr = in.nextLine().split("\\\\");
+
+        System.out.println(inArr[inArr.length - 1].split("\\.")[0]);
+    }
+
+    @Override
+    public void string7(){
+
+        System.out.println("String7() function enter line:");
+        String[] inArr = in.nextLine().split("\\\\");
+
+        System.out.println(inArr[inArr.length - 1].split("\\.")[1]);
     }
 }

@@ -8,6 +8,8 @@ public interface Interface {
 
     public int[] arrStringToInt(String[] strArr);
 
+    public int[][] inFullArray(int m, int n);
+
     public boolean isPalindrom(int number);
 
     public boolean isTub(int n);
