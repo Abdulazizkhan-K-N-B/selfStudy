@@ -1,7 +1,7 @@
 package com.aknb.tasks.Exercises01;
 
 public interface AllInterface {
-    
+
     /* 01.01 */
     public void if1();
 
@@ -73,22 +73,22 @@ public interface AllInterface {
 
     /* 01.24 */
     public void funSimple3();
-    
+
     /* 01.25 */
     public void funSimple4();
-    
+
     /* 01.26 */
     public void funSimple5();
-    
+
     /* 01.27 */
     public void funSimple6();
-    
+
     /* 01.28 */
     public void funSimple7();
-    
+
     /* 01.29 */
     public void funSimple8();
-    
+
     /* 01.30 */
     public void funSimple9();
 
@@ -179,6 +179,21 @@ public interface AllInterface {
     /* 01.59 */
     public void string6();
 
-     /* 01.60 */
-     public void string7();
+    /* 01.60 */
+    public void string7();
+
+    /* 01.61 */
+    public void string8();
+
+    /* 01.62 */
+    public void string9();
+
+    /* 01.63 */
+    public void string10();
+
+    /* 01.64 */
+    public void string11();
+
+    /* 01.65 */
+    public void param1();
 }

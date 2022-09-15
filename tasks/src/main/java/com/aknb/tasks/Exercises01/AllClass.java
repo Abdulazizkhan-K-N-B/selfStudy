@@ -1471,24 +1471,24 @@ public class AllClass implements AllInterface {
         System.out.print("String1() function enter line: ");
         String[] inArr = in.nextLine().split(" ");
 
-        for (int i = 0; i < inArr.length; i++){
+        for (int i = 0; i < inArr.length; i++) {
 
             System.out.print(
-                inArr[i].substring(0, 1).toUpperCase() + inArr[i].substring(1) + " "
-            );;
+                    inArr[i].substring(0, 1).toUpperCase() + inArr[i].substring(1) + " ");
+            ;
         }
         System.out.println();
     }
 
     @Override
-    public void string5(){
+    public void string5() {
 
         System.out.print("String5() function enter line:");
         System.out.println(in.nextLine().replaceAll("\\s+", " "));
     }
 
     @Override
-    public void string6(){
+    public void string6() {
 
         System.out.println("String6() function enter line:");
         String[] inArr = in.nextLine().split("\\\\");
@@ -1497,11 +1497,102 @@ public class AllClass implements AllInterface {
     }
 
     @Override
-    public void string7(){
+    public void string7() {
 
         System.out.println("String7() function enter line:");
         String[] inArr = in.nextLine().split("\\\\");
 
         System.out.println(inArr[inArr.length - 1].split("\\.")[1]);
+    }
+
+    @Override
+    public void string8() {
+
+        System.out.println("String8() function enter line:");
+        String[] inArr = in.nextLine().split("\\\\");
+
+        if (inArr.length <= 2) {
+
+            System.out.println("\\");
+        } else {
+
+            System.out.println(inArr[1]);
+        }
+    }
+
+    @Override
+    public void string9() {
+
+        System.out.println("String9() function enter line:");
+        String[] inArr = in.nextLine().split("\\\\");
+
+        if (inArr.length <= 2) {
+
+            System.out.println("\\");
+        } else {
+
+            System.out.println(inArr[inArr.length - 2]);
+        }
+    }
+
+    @Override
+    public void string10() {
+
+        System.out.println("String10() function enter word:");
+        char[] charArr = in.next().toCharArray();
+
+        char[] letters = commonMethods.getLettersInCharArr(charArr);
+
+        System.out.println(commonMethods.withOrder(letters));
+    }
+
+    @Override
+    public void string11() {
+
+        System.out.println("String11() function enter line:");
+        char[] charArr = in.next().toCharArray();
+
+        byte openBracketCount = 0, closeBracketCount = 0;
+        char temp;
+
+        for (byte i = 0; i < charArr.length; i++) {
+
+            temp = charArr[i];
+
+            if (temp == '(' && closeBracketCount == 0) {
+
+                openBracketCount++;
+            } else if (openBracketCount > closeBracketCount && temp == ')' && openBracketCount != 0) {
+
+                closeBracketCount++;
+            } else if (openBracketCount == closeBracketCount && temp == ')' && openBracketCount != 0) {
+
+                openBracketCount = 0;
+                closeBracketCount = 0;
+                System.out.println(i);
+                break;
+            }
+        }
+
+        if (openBracketCount == closeBracketCount && openBracketCount > 0) {
+
+            System.out.println(0);
+        } else if (openBracketCount > closeBracketCount && openBracketCount > 0) {
+
+            System.out.println(-1);
+        }
+    }
+
+    @Override
+    public void param1(){
+
+        System.out.print("Param1() function.\nEnter the size of array.\nsize: ");
+        int size = in.nextInt();
+
+        System.out.print("array: ");
+        int[] intArr = commonMethods.arrStringToInt(in.nextLine().split(" "));
+
+        int min = commonMethods.getMinFromArray(intArr);
+        System.out.println(min);
     }
 }

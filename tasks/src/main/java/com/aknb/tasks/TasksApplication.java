@@ -12,7 +12,7 @@ public class TasksApplication {
         SpringApplication.run(TasksApplication.class, args);
         
         AllClass allClass = new AllClass();
-        allClass.string7();
+        allClass.string11();
     }
 
 }

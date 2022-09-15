@@ -30,7 +30,7 @@ public class Common implements Interface {
     }
 
     @Override
-    public int[][] inFullArray(int m, int n){
+    public int[][] inFullArray(int m, int n) {
 
         Scanner in = new Scanner(System.in);
         System.out.print("array: ");
@@ -40,7 +40,7 @@ public class Common implements Interface {
                 n,
                 arrStringToInt(
                         in.nextLine().split(" ")));
-                        
+
     }
 
     @Override
@@ -78,6 +78,35 @@ public class Common implements Interface {
             }
         }
         return (n == 1) ? false : true;
+    }
+
+    @Override
+    public boolean isLetter(char letter) {
+
+        try {
+
+            Integer.parseInt(String.valueOf(letter));
+        } catch (Exception e) {
+
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public char withOrder(char[] letters) {
+
+        int firstNeighbor, secondNeighbor;
+        for (byte i = 0; i < letters.length - 1; i++) {
+
+            firstNeighbor = letters[i];
+            secondNeighbor = letters[i + 1];
+
+            if (firstNeighbor > secondNeighbor) {
+                return letters[i + 1];
+            }
+        }
+        return 48;
     }
 
     @Override
@@ -250,6 +279,20 @@ public class Common implements Interface {
     }
 
     @Override
+    public int getMinFromArray(int[] array){
+        int min = array[0], u = 1;
+
+        while (u < array.length){
+
+            if (array[u] < min){
+
+                min = array[u];
+            }
+        }
+        return min;
+    }
+
+    @Override
     public int[] bubbleSort(int nums[]) {
 
         for (int i = 0; i < nums.length; i++) {
@@ -353,5 +396,28 @@ public class Common implements Interface {
         }
 
         return matrix;
+    }
+
+    @Override
+    public char[] getLettersInCharArr(char[] charArr) {
+
+        byte letterCount = 0;
+        char[] lettersMain = new char[charArr.length];
+
+        for (int i = 0; i < charArr.length; i++) {
+
+            if (isLetter(charArr[i])) {
+
+                lettersMain[letterCount] = charArr[i];
+                letterCount++;
+            }
+        }
+
+        char[] letters = new char[letterCount];
+        for (int j = 0; j < letterCount; j++) {
+
+            letters[j] = lettersMain[j];
+        }
+        return letters;
     }
 }
