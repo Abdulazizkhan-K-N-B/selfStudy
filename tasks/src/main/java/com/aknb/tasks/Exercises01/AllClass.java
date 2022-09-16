@@ -1131,7 +1131,8 @@ public class AllClass implements AllInterface {
             for (int index = 0; index < n; index++) {
                 System.out.print(
                         commonMethods.matrixSpiral(m, n,
-                                commonMethods.arrStringToInt(in.nextLine().split(" ")))[i][index] + "    ");
+                                commonMethods.arrStringToInt(
+                                    in.nextLine().split(" "), m * n))[i][index] + "    ");
             }
             System.out.println();
         }
@@ -1143,7 +1144,12 @@ public class AllClass implements AllInterface {
         System.out.print("Matrix2 function\nm: ");
         int m = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, m);
+        System.out.print("array: ");
+
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                m,
+                in.nextLine().split(" "));
 
         int j = 0;
         for (int i = 0; i < m; i++) {
@@ -1173,7 +1179,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int sumOfRaw = 0;
 
@@ -1199,7 +1208,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int[] multOfColumn = new int[n];
         for (int i = 0; i < n; i++) {
@@ -1233,7 +1245,10 @@ public class AllClass implements AllInterface {
         int n = in.nextInt();
 
         int mCount = 0, pCount = 0;
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         byte rawNum = 0;
         for (int i = 0; i < m; i++) {
@@ -1270,7 +1285,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int highest = 0, temp;
         for (int i = 0; i < m; i++) {
@@ -1298,7 +1316,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int[] highestArr = new int[n];
 
@@ -1328,7 +1349,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int[] smallest = { matrix[0][0], 0, 0 };
 
@@ -1356,7 +1380,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int[] smallest = { matrix[0][0], 0 };
 
@@ -1395,7 +1422,10 @@ public class AllClass implements AllInterface {
         System.out.print("n: ");
         int n = in.nextInt();
 
-        int[][] matrix = commonMethods.inFullArray(m, n);
+        int[][] matrix = commonMethods.inFullArray(
+                m,
+                n,
+                in.nextLine().split(" "));
 
         int[] smallest = { matrix[0][0], 0 };
 
@@ -1584,15 +1614,32 @@ public class AllClass implements AllInterface {
     }
 
     @Override
-    public void param1(){
+    public void param1() {
 
         System.out.print("Param1() function.\nEnter the size of array.\nsize: ");
         int size = in.nextInt();
 
         System.out.print("array: ");
-        int[] intArr = commonMethods.arrStringToInt(in.nextLine().split(" "));
+        int[] intArr = commonMethods.arrStringToInt(in.nextLine().split(" "), size);
 
         int min = commonMethods.getMinFromArray(intArr);
         System.out.println(min);
+    }
+
+    @Override
+    public void param2() {
+
+        System.out.print("Param2() function.\nEnter the size of array.\nsize: ");
+        int size = in.nextInt();
+
+        System.out.print("array: ");
+        int[] intArr = commonMethods.arrStringToInt(in.nextLine().split(" "), size);
+
+        intArr = commonMethods.invert(intArr, intArr.length);
+
+        for (int i = 0; i < intArr.length; i++) {
+
+            System.out.println(intArr[i]);
+        }
     }
 }

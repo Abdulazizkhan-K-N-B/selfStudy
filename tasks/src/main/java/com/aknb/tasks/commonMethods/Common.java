@@ -19,10 +19,10 @@ public class Common implements Interface {
     }
 
     @Override
-    public int[] arrStringToInt(String[] strArr) {
-        int[] intArr = new int[strArr.length];
+    public int[] arrStringToInt(String[] strArr, int size) {
+        int[] intArr = new int[size];
 
-        for (int u = 0; u < strArr.length; u++) {
+        for (int u = 0; u < size; u++) {
 
             intArr[u] = Integer.valueOf(strArr[u]);
         }
@@ -30,17 +30,25 @@ public class Common implements Interface {
     }
 
     @Override
-    public int[][] inFullArray(int m, int n) {
+    public int[] invert(int[] arr, int size) {
 
-        Scanner in = new Scanner(System.in);
+        for (int i = 0; i < size / 2; i++) {
+
+            arr[i] += arr[size - i];
+            arr[size - i] = arr[i] - arr[size - i];
+            arr[i] -= arr[size - i];
+        }
+        return arr;
+    }
+
+    @Override
+    public int[][] inFullArray(int m, int n, String[] arr) {
         System.out.print("array: ");
 
         return matrixRowByRow(
                 m,
                 n,
-                arrStringToInt(
-                        in.nextLine().split(" ")));
-
+                arrStringToInt(arr, m * n));
     }
 
     @Override

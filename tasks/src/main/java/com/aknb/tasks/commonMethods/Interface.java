@@ -42,9 +42,11 @@ public interface Interface {
 
     public int[] insertionSort(int[] nums);
 
-    public int[] arrStringToInt(String[] strArr);
+    public int[] arrStringToInt(String[] strArr, int size);
 
-    public int[][] inFullArray(int m, int n);
+    public int[] invert(int[] intArr, int size);
+    
+    public int[][] inFullArray(int m, int n, String[] arr);
 
     public int[][] matrixSpiral(int m, int n, int[] intArr);
 
@@ -53,4 +55,5 @@ public interface Interface {
     public char withOrder(char[] letters);
 
     public char[] getLettersInCharArr(char[] charArr);
+
 }

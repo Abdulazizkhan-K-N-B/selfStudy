@@ -196,4 +196,7 @@ public interface AllInterface {
 
     /* 01.65 */
     public void param1();
+
+    /* 01.66 */
+    public void param2();
 }
