@@ -1,7 +1,5 @@
 package com.aknb.tasks.commonMethods;
-
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Common implements Interface {
 

@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class MultiSum {
 
+    private static Scanner in = new Scanner(System.in);
     /*
      * Hackerrank examine exercise multi sum
      */
 
     public static void multiSum() {
 
-        Scanner in = new Scanner(System.in);
 
         System.out.print("Enter: ");
         String[] input = in.nextLine().split(" ");
@@ -39,7 +39,6 @@ public class MultiSum {
     }
 
     public static void multiSumV2() {
-        Scanner in = new Scanner(System.in);
 
         System.out.print("EnterV2: ");
         String[] input = in.nextLine().split(" ");

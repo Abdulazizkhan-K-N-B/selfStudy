@@ -47,9 +47,9 @@ public class AuthService {
 
         String link = String.format("%s%s", this.url, token);
 
-        // emailSender.send(
-        // request.getEmail(),
-        // buildEmail(request.getFirstname(), link));
+        emailSender.send(
+        request.getEmail(),
+        buildEmail(request.getFirstname(), link));
 
         return token;
     }
@@ -105,7 +105,7 @@ public class AuthService {
 
     public Object updateUserPassword(UpdatePasswordDto updatePasswordDto) {
 
-        User user = userService.getUserByEmail(updatePasswordDto.getEmail());
+        userService.getUserByEmail(updatePasswordDto.getEmail());
 
         
         
