@@ -10,4 +10,7 @@ public class SignupLoginApplication {
         SpringApplication.run(SignupLoginApplication.class, args);
     }
 
+    class Hello{
+    
+    }
 }
