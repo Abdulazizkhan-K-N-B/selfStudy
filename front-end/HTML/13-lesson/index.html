@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+
+    <style>
+        .linkcolors:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .linkcolors:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .linkcolors:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .linkcolors:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .linkbutton:link, .linkbutton:visited {
+            background-color: #f44346;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: 1px solid rgba(10, 255, 1, 0.332);
+            border-radius: 12px;
+        }
+
+        .linkbutton:hover, .linkbutton:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#link-colors">Jump to link colors</a>
+
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- This is because i need some empty some lines -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+    
+    <!-- 
+        <a href="url">Link Text</a>
+     -->
+     <!-- ABSOLUTE URL -->
+    <a href="http://w3schools.com" target="_blank">Visit to W3schools.com</a>
+    <a href="http://google.com" target="_blank">Visit to Google.com</a>
+
+    <!-- RELATIVE URL -->
+    <br>
+    <a href="/front-end/HTML/_images/cute-cat.jpg" target="_blank">Image Cute Cat</a>
+
+    <br>
+    <a href="/front-end/HTML/_images/cute-cat.jpg">
+        <img src="/front-end/HTML/_images/cute-cat.jpg" alt="Cute Cat Image" width="200px"  height="200px">
+    </a>
+
+    <p>Link to email address</p>
+    <a href="mailto:somebody.example.com">abdulazizkhan.k.n.b@gmail.com</a>
+
+    <button onclick="document.location = 'google.com'">Click</button>
+
+    <a href="http://www.w3schools.com/html/" title="go to w3schools html section">Visit W3schools Html tutorial</a>
+
+
+    <!-- LINK COLORS -->
+    <h1 id="link-colors">Link Colors</h1>
+    <p>You can Change Default colors of links</p>
+    <a class="linkcolors" href="/front-end/HTML/_images/cute-cat.jpg" target="_blank">Cute-Cat</a>
+
+    <a class="linkbutton" href="http://google.com" target="_blank">Link to google.com</a>
+</body>
+</html>

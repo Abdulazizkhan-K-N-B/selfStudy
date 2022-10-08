@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling</title>
+
+    <style>
+
+        .header {
+            color: rgba(7, 234, 255, 0.876);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table, td {
+            border: 1px solid skyblue;
+            border-collapse: collapse;
+        }
+
+        .tr-1:nth-child(even) {
+            background-color: aquamarine;
+        }
+
+        .td-2:nth-child(even) {
+            background-color: aquamarine;
+        }
+
+        tr:hover {
+            background-color: #D6EEEE;
+        }
+    </style>
+</head>
+<body style="font-family: courier;">
+    
+    <h1 class="header">Styling</h1>
+    <table>
+        <caption>Zebra stripes</caption>
+
+        <tr class="tr-1">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        
+        <tr class="tr-1">
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        
+        <tr class="tr-1">
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        
+        <tr class="tr-1">
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+        
+        <tr class="tr-1">
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <!--  -->
+
+    <table style="margin-top: 100px;">
+        <caption>Vertical Zebra</caption>
+
+        <tr>
+            <td class="td-2">1</td>
+            <td class="td-2">2</td>
+            <td class="td-2">3</td>
+            <td class="td-2">4</td>
+        </tr>
+        
+        <tr>
+            <td class="td-2">5</td>
+            <td class="td-2">6</td>
+            <td class="td-2">7</td>
+            <td class="td-2">8</td>
+        </tr>
+        
+        <tr>
+            <td class="td-2">9</td>
+            <td class="td-2">10</td>
+            <td class="td-2">11</td>
+            <td class="td-2">12</td>
+        </tr>
+        
+        <tr>
+            <td class="td-2">13</td>
+            <td class="td-2">14</td>
+            <td class="td-2">15</td>
+            <td class="td-2">16</td>
+        </tr>
+        
+        <tr>
+            <td class="td-2">17</td>
+            <td class="td-2">18</td>
+            <td class="td-2">19</td>
+            <td class="td-2">20</td>
+        </tr>
+    </table>
+</body>
+</html>
