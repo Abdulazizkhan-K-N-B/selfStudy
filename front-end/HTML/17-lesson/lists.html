@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+
+    <style>
+      .header {
+        text-align: center;
+        color: green;
+      }
+
+      .nav-bar-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+
+      .nav-bar-li {
+        float: left;
+      }
+
+      .nav-bar-li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      .nav-bar-li a:hover {
+        background-color: #111111;
+      }
+      .m-top {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body style="font-family: courier">
+    <!-- 
+        Use the HTML <ul> element to define an unordered list
+        Use the CSS list-style-type property to define the list item marker
+        Use the HTML <li> element to define a list item
+        Lists can be nested
+        List items can contain other HTML elements
+        Use the CSS property float:left to display a list horizontally
+
+
+        Tag	    Description
+        <ul>	Defines an unordered list
+        <ol>	Defines an ordered list
+        <li>	Defines a list item
+        <dl>	Defines a description list
+        <dt>	Defines a term in a description list
+        <dd>	Describes the term in a description list
+     -->
+
+    <h1 class="header">Lists</h1>
+
+    <!-- UNORDERED LIST -->
+    <ul style="display: inline-block; width: 50%">
+      <!-- LIST ITEM -->
+      <li>item</li>
+      <li>
+        item
+        <ul>
+          <li>item</li>
+          <li>
+            item
+            <ul>
+              <li>item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <ol style="display: inline-block">
+      <!-- LIST ITEM -->
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+      <li>four</li>
+    </ol>
+
+    <!-- #UNORDERED LIST -->
+    <h1 class="header">Navigation Menu</h1>
+    <p>
+      In this example, we use CSS to style the list horizontally, to create a
+      navigation menu:
+    </p>
+    <ul class="nav-bar-ul">
+      <li class="nav-bar-li"><a href="#home">Home</a></li>
+      <li class="nav-bar-li"><a href="#news">News</a></li>
+      <li class="nav-bar-li"><a href="#contact">Contact</a></li>
+      <li class="nav-bar-li"><a href="#about">About</a></li>
+    </ul>
+
+    <!-- #ORDERED LIST -->
+    <h1 class="header m-top">Oredred list</h1>
+    <ol start="14" type="A">
+      <li>item</li>
+      <li>item</li>
+    </ol>
+  </body>
+</html>
