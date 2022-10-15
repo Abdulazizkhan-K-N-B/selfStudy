@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form input types</title>
+
+    <style>
+
+        .header {
+
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Form Input Types</h1>
+
+    <form>
+
+        <!-- DEFAULT is text -->
+        <label for="fname">Firstname:</label> <br>
+        <input type="text" name="fname" id="fname" value=""> <br>
+
+        <label for="lname">Lastname:</label> <br>
+        <input type="text" id="lname" name="lname"> <br>
+
+        <label for="password">Password:</label> <br>
+        <input type="password" id="password" name="password"> <br> <br>
+
+        <p>Select your learning language:</p>
+        
+        <input type="radio" name="l-language" id="java">
+        <label for="java">Java</label> <br>
+    
+        <input type="radio" name="l-language" id="go">
+        <label for="go">Go</label>
+
+        <br>
+
+        <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike">
+        <label for="vehicle1">I have a bike</label> <br>
+
+        <input type="checkbox" name="vehicle2" id="vehicle2" value="Car">
+        <label for="vehicle2">I have a Car</label> <br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" name="birthdate" id="birthdate"> <br>
+
+        <label for="datetime">Date Time Local</label>
+        <input type="datetime-local" name="datetime" id="datetime"> <br>
+
+        <label for="email">Enter your email</label>
+        <input type="email" name="email" id="email">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"> <br> <br>
+        <input type="button" onclick="alert('Hello World!')" value="Greeting">
+    </form>
+</body>
+</html>

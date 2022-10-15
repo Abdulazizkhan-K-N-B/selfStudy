@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+
+    <style>
+      .header {
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="font-family: courier">
+    <h1 class="header">HTML forms</h1>
+
+    <h2 class="header">Text Fields</h2>
+
+    <form action="/front-end/HTML/_images/cute-cat.jpg">
+      <label for="fname">Firstname:</label><br />
+      <input type="text" name="fname" id="fname" /><br />
+
+      <label for="lname">Lastname:</label><br />
+      <input type="text" name="lname" id="lname" /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>
+      If you click the "Submit" button, the form-data will be sent to a page
+      called "/action_page.php".
+    </p>
+
+    <br><hr><br>
+
+    <h2 class="header">Radio Buttons</h2>
+
+    <p>Choose your favorite web language:</p>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+
+    <br><hr><br>
+
+    <h2 class="header">Checkboxes</h2>
+    <p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+    <form action="/front-end/HTML/_images/cute-cat.jpg">
+        <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike">
+        <label for="vehicle1">I have a bike</label><br>
+
+        <input type="checkbox" name="vehicle2" id="vehicle2" value="Car">
+        <label for="vehicle2">I have a car</label><br>
+
+        <input type="checkbox" name="vehicle3" id="vehicle3" value="Car">
+        <label for="vehicle3">I have a boat</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

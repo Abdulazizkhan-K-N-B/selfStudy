@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Elements</title>
+
+    <style>
+      .header {
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 
+
+
+        Tag	Description
+        <form>	Defines an HTML form for user input
+        <input>	Defines an input control
+        <textarea>	Defines a multiline input control (text area)
+        <label>	Defines a label for an <input> element
+        <fieldset>	Groups related elements in a form
+        <legend>	Defines a caption for a <fieldset> element
+        <select>	Defines a drop-down list
+        <optgroup>	Defines a group of related options in a drop-down list
+        <option>	Defines an option in a drop-down list
+        <button>	Defines a clickable button
+        <datalist>	Specifies a list of pre-defined options for input controls
+        <output>	Defines the result of a calculation
+     -->
+    <h1 class="header">Form Elements</h1>
+
+    <form>
+      <label for="fname">Firstname</label>
+      <input type="text" name="fname" id="fname" />
+    </form>
+
+    <h2 class="header">Select element</h2>
+    <form>
+      <label for="select">Choose a car:</label>
+      <select name="select" id="select" size="3" multiple>
+        <option value="bmw">BMW</option>
+        <option value="volvo">Volvo</option>
+        <option value="saab" selected>Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option></select
+      ><br /><br />
+      <input type="submit" />
+    </form>
+
+    <h2 class="header">Textarea</h2>
+    <form>
+      <textarea name="textarea" id="textarea" cols="30" rows="10">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, at!</textarea
+      ><br /><br />
+
+      <textarea name="message" id="message" style="width: 400px; height: 200px">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis alias, nobis dolorum commodi eveniet animi delectus asperiores quo hic molestiae voluptatum! Minus ipsum nobis quo quisquam optio quam repellat repellendus, adipisci praesentium deleniti eius quaerat mollitia tempora ad ex quidem nostrum perferendis reprehenderit. Ex earum obcaecati sapiente beatae debitis nesciunt at officia! Aut animi ullam qui quia, corrupti sunt vel quasi, tempora dignissimos amet repellendus! Dolore quaerat magnam qui fugit optio consequuntur reprehenderit laboriosam labore maiores quas! Cupiditate, rem vel veritatis beatae odio quas modi illo facilis qui eligendi voluptatem consequuntur nihil voluptate itaque maiores impedit quos eum labore?</textarea
+      >
+      <input type="submit" value="submit" />
+    </form>
+
+    <h2 class="header">Button element</h2>
+
+    <button type="button" onclick="alert('Hello world!')">Click me</button>
+
+    <h2 class="header">DataList element</h2>
+    <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+    <form>
+        
+        <input list="browsers" name="browsers">
+        <datalist id="browsers">
+
+            <option value="Internet explorer"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+        </datalist>
+        <br><br>
+        <input type="submit">
+    </form>
+
+
+  </body>
+</html>
