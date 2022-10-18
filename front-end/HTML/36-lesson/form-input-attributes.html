@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input Attributes</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="header">Form Input Attributes</h1>
+
+    <form>
+
+        <label for="fname">Firstname: </label>
+        <input type="text" id="fname" name="fname" value="John" readonly> <br>
+
+        <label for="lname">Lastname: </label>
+        <input type="text" id="lname" name="lname" value="Doe" disabled> <br>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" maxlength="6" size="6"> <br>
+
+        <label for="files">Select files: </label>
+        <input type="file" name="files" id="files" multiple>
+    </form>
+  </body>
+</html>
