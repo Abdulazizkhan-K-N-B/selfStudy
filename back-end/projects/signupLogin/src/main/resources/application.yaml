@@ -7,9 +7,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://ec2-52-71-23-11.compute-1.amazonaws.com:5432/d2tlr7cf7e852m
-    username: rbeichckwdzncv
-    password: 0c18386b49685bf8d879dba34e56ed8241f889c66ea57403440687b8d91e5048
+    url: jdbc:postgresql://containers-us-west-28.railway.app:7851/railway
+    username: postgres
+    password: Wr2hmlekopfTHhvswnxf
   jpa:
     hibernate:
       ddl-auto: update
