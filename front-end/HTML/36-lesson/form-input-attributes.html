@@ -29,10 +29,20 @@
         <input type="text" id="lname" name="lname" value="Doe" disabled> <br>
 
         <label for="password">Password: </label>
-        <input type="password" id="password" name="password" maxlength="6" size="6"> <br>
+        <input type="password" id="password" name="password" maxlength="6" size="6" required> <br>
 
         <label for="files">Select files: </label>
-        <input type="file" name="files" id="files" multiple>
+        <input type="file" name="files" id="files" multiple> <br>
+
+        <label for="ccode">Country Code:</label> <br>
+        <input type="text" id="ccode" name="ccode" pattern="[A-Za-z]{3}" title="Three letter country code" step="3"> <br>
+
+        <label for="number">Phone Number:</label>
+        <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678">
+        
+        <br> <br>
+
+        <input type="submit" value="Submit">
     </form>
   </body>
 </html>

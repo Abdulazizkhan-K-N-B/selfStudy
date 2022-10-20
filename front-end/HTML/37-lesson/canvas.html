@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">Canvas</h1>
+
+    <canvas
+      id="straight"
+      width="200px"
+      height="200px"
+      style="border: 1px solid #000000"
+    ></canvas>
+
+    <canvas
+      id="circle"
+      style="width: 200px; height: 200px; border: 1px solid #000000"
+    ></canvas>
+
+    <canvas
+      id="text"
+      style="width: 200px; height: 200px; border: 1px solid #000000"
+    ></canvas>
+
+    <script>
+      var c = document.getElementById("straight");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+
+      var circle = document.getElementById("circle");
+      var ctz = circle.getContext("2d");
+      ctz.beginPath();
+      ctz.arc(100, 75, 40, 0, 2 * Math.PI);
+      ctz.stroke();
+
+      var text = document.getElementById("text");
+      var t = text.getContext("2d");
+      t.font = "30px Arial";
+      t.fillText("Hello world!", 70, 90);
+    </script>
+  </body>
+</html>
