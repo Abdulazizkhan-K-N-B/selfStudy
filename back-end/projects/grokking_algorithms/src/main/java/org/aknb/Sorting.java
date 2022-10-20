@@ -1,2 +1,4 @@
-package org.aknb;public class SelectionSort {
+package org.aknb;
+
+public class SelectionSort {
 }
