@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgba(0, 128, 0, 0.2);
+}
+
+.header {
+
+    color: green;
+    text-align: center;
+}
+
+.padding {
+    border: 2px solid yellow;
+    padding: 10px 20px 30px 40px;
+}

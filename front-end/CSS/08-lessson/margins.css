@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgba(0, 128, 0, 0.29);
+}
+
+.header {
+    color: green;
+    text-align: center;
+}
+
+.container {
+    border: 2px solid black;
+}
+
+.para1 {
+    border: 2px solid rgba(37, 184, 27, 0.745);
+    margin: 10px 20px 30px 40px;
+}

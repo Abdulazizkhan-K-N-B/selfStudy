@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+
+    <style>
+      * {
+        /* 
+                The CSS Universal Selector
+                The universal selector (*) selects all HTML elements on the page. 
+            */
+        box-sizing: border-box;
+      }
+      p {
+        color: red;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+      }
+
+      #withId {
+        border: 2px solid blue;
+        border-radius: 12px;
+        color: green;
+      }
+
+      .withClass {
+        border: 3px dotted red;
+        border-radius: 15px;
+        color: blue;
+      }
+
+      .header,
+      #h2-header,
+      h3 {
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Selector	Example	Example description
+        #id	#firstname	Selects the element with id="firstname"
+        .class	.intro	Selects all elements with class="intro"
+        element.class	p.intro	Selects only <p> elements with class="intro"
+        *	*	Selects all elements
+        element	p	Selects all <p> elements
+        element,element,..	div, p	Selects all <div> elements and all <p> elements
+     -->
+
+    <h1 class="header">Selectors</h1>
+    <h2 id="h2-header">H2 header</h2>
+    <h3>H3 header</h3>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolorem
+      vero distinctio quae optio sunt sequi dolore est amet voluptatem aliquam,
+      culpa explicabo, numquam iure quas dolores corporis quam illum.
+    </p>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum tempore
+      voluptate vero optio inventore nemo consequuntur dolorem temporibus quasi
+      aperiam? Quisquam, perspiciatis fuga unde esse maiores iure nostrum ad
+      minima.
+    </p>
+
+    <p id="withId">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+      eveniet? Eveniet, minima tenetur autem asperiores quas doloremque ad
+      tempora ab quo dolores molestiae! Reprehenderit consequuntur doloribus
+      molestiae obcaecati libero minima.
+    </p>
+
+    <p class="withClass">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet illo
+      quaerat, reiciendis et nisi dolores eligendi dolorem ab modi
+      necessitatibus placeat saepe nobis maxime dolor? Minus numquam recusandae
+      a quibusdam.
+    </p>
+  </body>
+</html>

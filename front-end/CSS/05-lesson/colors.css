@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(255, 99, 71, 0.4);
+}
+
+.header {
+    color: blue;
+    text-align: center;
+}
+
+.hello-world {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    background-color: blue;
+    border: 2px solid tomato;
+    border-radius: 12px;
+}
+
+.para1 {
+    color: white;
+    margin-top: 30px;
+    padding: 20px 10px;
+    background-color: brown;
+    border: 2px solid blue;
+    border-radius: 12px;
+}

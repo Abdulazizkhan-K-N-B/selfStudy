@@ -1,0 +1,14 @@
+.header {
+    /* This is a single line comment */
+    color: green;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+/* This is
+a multi-line
+comment */
