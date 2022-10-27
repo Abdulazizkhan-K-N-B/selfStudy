@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.header {
+    color: green;
+    text-align: center;
+    /* text-shadow: horizontal vertical blur-effect color */
+    text-shadow: 2px 2px 5px red;
+}
+
+.dotted {
+    background-color: burlywood;
+    color: rgba(0, 128, 0);
+    outline: 5px dotted green;
+    text-align: center;
+}
+
+.dashed {
+    background-color: blueviolet;
+    color: blue;
+    outline: 5px dashed blue;
+    text-align: right;
+}
+
+.solid {
+    background-color: black;
+    color: yellow;
+    outline: 5px solid yellow;
+    text-align: left;
+}
+
+.double {
+    background-color: gold;
+    color: red;
+    outline: 5px double red;
+    text-align-last: right;
+}
+
+.groove {
+    background-color: red;
+    color: black;
+    outline: 5px groove black;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.ridge {
+    background-color: blue;
+    color: gold;
+    outline: 5px ridge gold;
+}
+
+.inset {
+    background-color: yellow;
+    color: blueviolet;
+    outline: 5px inset blueviolet;
+}
+
+.outset {
+    background-color: green;
+    color: burlywood;
+    outline: 5px outset burlywood;
+}
+
+p {
+    margin: 50px 20px;
+}
+
+.overline {
+    text-transform: capitalize;
+    text-decoration: overline;
+    text-decoration-color: green;
+    text-decoration-style: dotted;
+}
+
+.line-through {
+    text-transform: lowercase;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-style: dashed;
+}
+
+.underline {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-style: solid;
+}
+
+.overline-underline {
+    text-transform: none;
+    text-decoration: overline underline double purple 5px;
+    text-indent: 50px;
+    letter-spacing: 5px;
+    line-height: 3.8;
+    word-spacing: 30px;
+}

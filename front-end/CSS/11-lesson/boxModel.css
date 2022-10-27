@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.header {
+    text-align: center;
+    color: green;
+}
+
+.box-model {
+    background-color: lightgrey;
+    width: 400px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}

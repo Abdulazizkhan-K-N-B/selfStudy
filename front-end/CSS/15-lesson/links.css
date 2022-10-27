@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
+.header {
+    color: green;
+    text-align: center;
+}
+
+.anchor {
+    color: green;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: cyan;
+}

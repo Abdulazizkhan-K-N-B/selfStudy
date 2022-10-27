@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.header {
+    color: green;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.p-lorem {
+    font-style: italic;
+    font-size: larger;
+}
+
+.header-1 {
+    font-family: "Sofia", sans-serif;
+}
+
+.header-2 {
+    font: 20px AudioWide, sans-serif;
+}
