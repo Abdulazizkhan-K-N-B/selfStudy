@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #22334466;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    color: green;
+    text-align: center;
+}
+
+.ul-1, .ul-2, .ol-1, .ol-2 {
+    width: 45%;
+    float: left;
+    margin: 10px 5px;
+}
+
+.ul-1 {
+    list-style-type: circle;
+    border: 2px solid black;
+}
+
+.ul-2 {
+    list-style-type: square;
+    border: 2px solid green;
+}
+
+.ul-1, .ul-2 {
+    list-style-position: outside;
+}
+
+.ol-1 {
+    list-style-type: upper-roman;
+    border: 2px solid purple;
+}
+
+.ol-2 {
+    list-style-type: lower-alpha;
+    border: 2px solid blue;
+}
+
+.both{
+    margin: 15px 0;
+    border-bottom: 2px solid black;
+    clear: both;
+}

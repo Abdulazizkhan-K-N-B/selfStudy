@@ -1,0 +1,163 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:#565c8c;
+            font-family: tahoma,Arial;
+        }
+        .contanier{
+            margin: 78px auto;
+            width: 400px;
+            background-color: #ffffff66;
+            border: 0px solid #00000066;
+            height: 500px;
+            border-radius: 38px;
+            padding: 25px 35px;
+        }
+        .contanier h1{
+            text-align: center;
+            width: auto ;
+        }
+        .login{
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            padding: 0 10px;
+            margin-top: 35px;
+        }
+        .login #userLabel,
+        .login #passLabel{
+            font-size: 12px;
+            padding-left: 2px;
+            margin-bottom: 2px;
+        }
+        .login .usInput,
+        .login .pwInput{
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 25px;
+            border: none;
+            background-color: #ffffff00;
+            border-bottom: 1px solid #8080805e;
+        }
+        .login .usInput,
+        .login .pwInput:focus{
+            outline: none;
+        }
+
+        .login p{
+            align-self: flex-end;
+            font-size: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: gray;
+        }
+        .contanier #login-Button{
+            margin: 25px auto;
+            display: block;
+            width: 200px;
+            line-height: 35px;
+            border-radius: 50px;
+            border: 0px solid white;
+            background-image: linear-gradient(to right, rgba(3, 169, 244, 0.82), rgba(233, 30, 99, 0.86));
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .contanier .or{
+            position: relative;
+            padding: 0 10px;
+            color: #757575;
+            margin: 10px 0;
+        }
+        .contanier .or p{
+            border: 1px solid #00000059;
+            border-radius: 3px;
+            background-color: #ffffffc4;
+            text-align: center;
+            width: 25px;
+            position: absolute;
+            top: -10px;
+            right: 150px;
+        }
+        .contanier .options {
+            display: flex;
+            list-style: none;
+            font-size: 30px;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 5px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .contanier .options #F{
+            color:#0b84ed;
+            background-color: white;
+            border-radius:40px;
+        }
+        .contanier .options #S{
+            background-color: #1d9bf0;
+            border-radius: 14px;
+            color: white;
+            font-size: 20px;
+            width: 32px;
+            padding: 5px;
+            text-align: center;
+        }
+        .contanier .options #T{
+            background-color: #c5221f;
+            border-radius: 14px;
+            color: white;
+            font-size: 20px;
+            width: 32px;
+            padding: 5px;
+            text-align: center;
+        }
+        .contanier .signUp{
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+            color: grey;
+        }
+        .contanier .signUp a{
+            color: grey;
+        }
+
+    </style>
+</head>
+<body>
+<div class="contanier">
+    <h1>Login</h1>
+    <div class="login">
+        <label id="userLabel">Username</label>
+        <input class="usInput" type="text" placeholder="Type your username">
+        <label id="passLabel">Password</label>
+        <input class="pwInput" type="password" placeholder="Type your password">
+        <p>Forget Password?</p>
+    </div>
+    <button id="login-Button">LOGIN</button>
+    <div class="or">
+        <hr>
+        <p>Or</p>
+    </div>
+    <div class="options">
+        <i id="F" class="fa-brands fa-facebook"></i>
+        <i id="S" class="fa-brands fa-twitter"></i>
+        <i id="T" class="fa-brands fa-google"></i>
+    </div>
+    <p class="signUp">Need an account? <a href="link">SIGN UP</a></p>
+</div>
+</body>
+</html>
