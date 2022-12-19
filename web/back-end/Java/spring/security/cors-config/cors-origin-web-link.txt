@@ -1,0 +1,2 @@
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+https://spring.io/guides/gs/rest-service-cors/

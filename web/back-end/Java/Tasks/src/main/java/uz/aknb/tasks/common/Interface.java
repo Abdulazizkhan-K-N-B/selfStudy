@@ -1,4 +1,4 @@
-package uz.aknb.tasks.commonMethods;
+package uz.aknb.tasks.common;
 
 public interface Interface {
 

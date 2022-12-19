@@ -1,4 +1,4 @@
-package uz.aknb.tasks.commonMethods;
+package uz.aknb.tasks.common;
 import java.util.Objects;
 
 public class Common implements Interface {

@@ -1,4 +1,4 @@
-package uz.aknb.tasks.Exercises01;
+package uz.aknb.tasks.Task.Task_01;
 
 public interface AllInterface {
 

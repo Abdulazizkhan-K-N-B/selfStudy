@@ -1,10 +1,10 @@
-package uz.aknb.tasks.Exercises01;
+package uz.aknb.tasks.Task.Task_01;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import uz.aknb.tasks.commonMethods.Common;
+import uz.aknb.tasks.common.Common;
 
 public class AllClass implements AllInterface {
 

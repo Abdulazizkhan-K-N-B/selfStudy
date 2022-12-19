@@ -2,8 +2,7 @@ package uz.aknb.tasks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import uz.aknb.tasks.Exercises01.AllClass;
+import uz.aknb.tasks.Task.Task_01.AllClass;
 
 @SpringBootApplication
 public class TasksApplication {
@@ -14,5 +13,4 @@ public class TasksApplication {
         AllClass allClass = new AllClass();
         allClass.param2();
     }
-
 }
